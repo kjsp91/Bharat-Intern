@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+    <link rel="stylesheet" href="../public/styles.css">
+</head>
+<body>
+    <div class="editpost">
+    <% if(locals.result){ %>
+    <form action="/editing<%=result.id%>" method="post">
+        <label for="title"><b>Title</b></label><br>
+        <input type="text" name="title" id="title" value="<%= result.title %>"><br>
+        <label for="post"><b>Post</b></label><br>
+        <textarea rows="5" cols="60"><%= result.post %></textarea><br>
+        <label for="author"><b>Author</b></label><br>
+        <input type="text" name="author" id="author" value="<%= result.author %>"><br>
+        <label for="date"><b>Date</b></label><br>
+        <input type="text" name="date" id="date" value="<%= result.date %>"><br>
+        <label for="image"><b>Image Url</b></label><br>
+        <input type="text" name="image" id="image" value="<%= result.image %>"><br>
+        <button type="submit">Update</button>
+        </form> 
+    <% } %>
+</div>
+</body>
+</html>

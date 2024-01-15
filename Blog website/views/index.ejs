@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Website</title>
+    <link rel="stylesheet" href="../public/styles.css">
+</head>
+<body>
+    <div class="main">
+        <section>
+            <h1>Welcome to the Blog !!</h1><br>
+            <p>This is the storage place for all your Blogs</p>
+            <button>Get Started</button>
+        </section>
+        <img src="https://www.sanzwebdevelopment.com.au/wp-content/uploads/2021/05/Top-10-tips-for-creative-blog-posts.png" alt="blog">  
+    </div>
+    <hr>
+    <div class="middle">
+        <a href="/new"><button>Create a new Post</button></a>
+        <% if(locals.details){ %>
+            <%details.forEach(e => {  %>           
+                <div class="card">
+                    <img src=<%= e.image %> alt="blog">
+                    <div class="innercard">
+                        <div class="button">
+                        <a href="/edit<%=e.id%>"><button>Edit</button></a>
+                        <a href="/delete<%=e.id%>"><button>Delete</button></a>
+                    </div>
+                    <h2><%= e.title %></h2>
+                    <p><%= e.post %></p>
+                    <b><p><%=e.author%></p></b>
+                    <small><p><%=e.date%></p></small>
+                </div>
+                </div>
+            <% }); %>
+        <%} %>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+    <link rel="stylesheet" href="../public/styles.css">
+</head>
+<body>
+    <div class="new">
+<form action="/submit" method="post">
+    <label for="title"><b>Title</b></label><br>
+    <input type="text" placeholder="Enter Title" name="title" id="title"><br>
+    <label for="post"><b>Post</b></label><br>
+    <textarea rows="5" cols="60" name="post" id="post" placeholder="Enter Post"></textarea><br>
+    <label for="author"><b>Author</b></label><br>
+    <input type="text" name="author" id="author" placeholder="Enter Author"><br>
+    <label for="date"><b>Date</b></label><br>
+    <input type="date" name="date" id="date" placeholder="Enter Date"><br>
+    <label for="image"><b>Image Url</b></label><br>
+    <input type="text" name="image" id="image" placeholder="Enter image Url"><br>
+    <button type="submit">Create</button>   
+</form>
+</div>
+</body>
+</html>
